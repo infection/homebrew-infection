@@ -4,7 +4,6 @@ class Infection < Formula
   url "https://github.com/infection/infection/releases/download/0.9.0/infection.phar"
   sha256 "1ff4002f5f8300128975913babbe58c27978ce7e7572486e1d5270728eae8a3e"
 
-  depends_on "php70-xdebug" if Formula["php70"].linked_keg.exist?
   depends_on "php71-xdebug" if Formula["php71"].linked_keg.exist?
 
   resource "pubkey" do
