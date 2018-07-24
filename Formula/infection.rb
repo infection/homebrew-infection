@@ -14,7 +14,7 @@ class Infection < Formula
 
   def install
     bin.install "infection.phar" => "infection"
-    resource("pubkey").stage { libexec.install "infection.phar.pubkey" }
+    resource("pubkey").stage { bin.install "infection.phar.pubkey" => "infection.pubkey" }
   end
 
   test do
