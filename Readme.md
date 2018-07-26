@@ -20,5 +20,5 @@ $ brew install infection
 You can then run the `infection` command from anywhere in the system
 
 ```bash
-$ infection -v
+$ infection -V
 ```
