@@ -8,7 +8,7 @@ This repository contains a [Homebrew](https://brew.sh) formula for installing [I
 To install infection, you need to tap the repository first
 
 ```bash
-$ brew tap pierredup/homebrew-infection
+$ brew tap infection/homebrew-infection
 ```
 
 Then install infection using the following command
