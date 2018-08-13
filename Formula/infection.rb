@@ -1,19 +1,19 @@
 class Infection < Formula
   desc "AST based PHP Mutation Testing Framework"
   homepage "https://infection.github.io"
-  url "https://github.com/infection/infection/releases/download/0.9.0/infection.phar"
-  sha256 "1ff4002f5f8300128975913babbe58c27978ce7e7572486e1d5270728eae8a3e"
+  url "https://github.com/infection/infection/releases/download/0.10.0/infection.phar"
+  sha256 "d08bead8819d3554f7bb1b76453a9977aa7907de5c0b02473b841a81dd6b8884"
 
   depends_on "php71-xdebug" if Formula["php71"].linked_keg.exist?
 
   resource "pubkey" do
-    url "https://github.com/infection/infection/releases/download/0.9.0/infection.phar.pubkey"
-    sha256 "7a23dff08d1b34333d7eab3a643a56347800083592e55c7e0294bb32fbfc09c8"
+    url "https://github.com/infection/infection/releases/download/0.10.0/infection.phar.asc"
+    sha256 "e3390fb76023c3e475de0d646a5170231931cc92ccc62bf5f2d1c956a650a76c"
   end
 
   def install
     bin.install "infection.phar" => "infection"
-    resource("pubkey").stage { bin.install "infection.phar.pubkey" => "infection.pubkey" }
+    resource("pubkey").stage { bin.install "infection.phar.asc" => "infection.asc" }
   end
 
   test do
